@@ -1,20 +1,20 @@
-import junit.framework.Assert;
+package com.tpassignment3q3;
+
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-/**
- * Created by student on 2016/03/14.
- */
-public class TestClass {
 
-   private ClassCalculator calculator1 = new CalculatorImp() ;
+/**
+ * Created by student on 2016/03/13.
+ */
+public class TestClass2 {
+
+    private ClassCalculator ncal ;
 
 
     @Before
     public void setUp() throws Exception {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-        cal = (ClassCalculator)ctx.getBean("cal");
+        ncal = (ClassCalculator)ctx.getBean("newcal");
     }
 
     @Test
@@ -30,5 +30,4 @@ public class TestClass {
         int result = calculator1.division(10,5);
         org.junit.Assert.assertEquals(result,2);
     }
-
 }

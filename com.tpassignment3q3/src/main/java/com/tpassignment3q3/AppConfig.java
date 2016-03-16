@@ -1,4 +1,4 @@
-/**
+package com.tpassignment3q3; /**
  * Created by student on 2016/03/14.
  */
 
@@ -10,4 +10,12 @@ public class AppConfig {
     public ClassCalculator getService(){
         return new CalculatorImp();
     }
+
+    @Bean(name="newcal")
+    public ClassCalculator getService(){
+        return new CalculatorImp2();
+    }
+
+
+
 }
